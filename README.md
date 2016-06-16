@@ -10,6 +10,8 @@ In R:
 install.packages("EpiModel")
 
 # install devtools if necessary, install.packages("devtools")
+devtools::install_github("statnet/EpiModelHPC")
+devtools::install_github("statnet/tergmLite")
 devtools::install_github("statnet/EpiModelHIVmsm")
 ```
 
