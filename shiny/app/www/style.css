@@ -1,0 +1,110 @@
+
+div.busy {
+  z-index: 10000;
+  position: absolute;
+  top: 220px;
+  right: 33%;
+  display: none;
+  text-align: center;
+  padding: 5px;
+}
+
+#onemodButton,
+#twomodButton {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: smaller;
+}
+
+.paramgroup1 {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #2E619E;
+  border-radius: 4px;
+}
+.paramgroup2 {
+  width: 90%;
+  /*color: #737373;*/
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #3FA394;
+  border-radius: 4px;
+}
+.gray {
+  opacity: 0.5;
+}
+
+#optionsbox {
+  z-index: 50;
+  position: absolute;
+  right: 30px;
+  top: 57px;
+  overflow: hidden;
+  padding: 10px;
+  height: 35px;
+  width: 200px;
+  font-size: small;
+}
+#optionsbox:hover {
+  height: 320px;
+}
+#optionstitle {
+  display: inline;
+  padding: 15px;
+  margin-left: 30px;
+}
+#optionsdrop {
+  padding: 4px 10px;
+}
+
+a {
+  color: #234978;
+}
+.well {
+  background-color: #f0f0f0;
+}
+code {
+  color: #445555;
+  background-color: #f5f5f5;
+}
+.btn {
+  padding: 6px;
+}
+
+.table3 table {
+  background-color: #ffffff;
+  width: 100%;
+}
+.table3 .data td[align=right] {
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: rgba(35, 73, 120, 0.2);
+}
+.table3 tbody td:hover {
+  background-color: rgba(35, 73, 120, 0.1);
+}
+.table3 tr:hover {
+  background-color: rgba(35, 73, 120, 0.1);
+}
+.table3 th {
+  text-align: center;
+  background-color: #234978;
+  color: #ffffff;
+  padding-bottom: 5px;
+}
+
+.navbar .navbar-brand{
+  padding: 0 12px;
+  font-size: 16px;
+  line-height: 40px;
+}
+.navbar-nav > li > a {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 40px;
+  height: 40px;
+}
+.navbar {
+  min-height: 40px;
+  height: 40px;
+}

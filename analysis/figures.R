@@ -1,5 +1,6 @@
 
 library("EpiModelHIVmsm")
+setwd("~/Dropbox/Dev/Camp/")
 
 # Figure 1 ----------------------------------------------------------------
 
@@ -215,5 +216,36 @@ contourplot(nnt ~ cov * adh, data = nnt.fit,
                           xlab = "Coverage",
                           main = "Number Needed to Treat",
                           col.regions = pal)
+dev.off()
+
+
+# Cover Art!
+
+pia.loess <- loess(pia ~ cov * adh, data = df, degree = 2, span = 0.15)
+pia.fit <- expand.grid(list(cov = seq(0.1, 0.9, 0.001),
+                            adh = seq(0.1, 0.9, 0.001)))
+pia.fit$pia <- as.numeric(predict(pia.loess, newdata = pia.fit))
+
+pal <- wesanderson::wes_palette("Zissou", n = 100, type = "continuous")
+
+# final dim = 1950 w, 2100 h
+tiff("papers/prepguidelines/analysis/Fig3-Cover-Contour.tiff", width = 2232, height = 2322, res = 200)
+contourplot(pia ~ cov * adh, data = pia.fit,
+            cuts = 9, region = TRUE,
+            ylab = "Adherence",
+            xlab = "Coverage",
+            main = "Percent Infections Averted",
+            col.regions = pal)
+dev.off()
+
+pal <- wesanderson::wes_palette("Zissou", n = 400, type = "continuous")
+tiff("papers/prepguidelines/analysis/Fig3-Cover-Smooth.tiff", width = 2232, height = 2322, res = 200)
+levelplot(pia ~ cov * adh, 
+          data = pia.fit,
+          cuts = 400,
+          ylab = "Adherence",
+          xlab = "Coverage",
+          main = "Percent Infections Averted",
+          col.regions = pal)
 dev.off()
 

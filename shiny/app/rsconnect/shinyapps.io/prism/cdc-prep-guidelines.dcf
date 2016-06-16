@@ -1,0 +1,9 @@
+name: cdc-prep-guidelines
+account: prism
+server: shinyapps.io
+appId: 99946
+bundleId: 441690
+url: https://prism.shinyapps.io/cdc-prep-guidelines/
+when: 1462379981.15565
+asMultiple: FALSE
+asStatic: FALSE
