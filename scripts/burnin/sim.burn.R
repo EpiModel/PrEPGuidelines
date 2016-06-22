@@ -1,7 +1,8 @@
 
 ## Packages
 library("methods")
-suppressPackageStartupMessages(library("EpiModelHIVmsm"))
+suppressMessages(library("EpiModelHIVmsm"))
+library("EpiModelHPC")
 
 ## Environmental Arguments
 args <- commandArgs(trailingOnly = TRUE)
@@ -13,20 +14,24 @@ fsimno <- paste(simno, jobno, sep = ".")
 load("est/nwstats.10k.rda")
 
 # Base model
-# ai.scale <- 1.323
-# prev <- 0.253
+ai.scale <- 1.323
+prev <- 0.253
 
-# 15% Prev model
-ai.scale <- 1.10
-prev <- 0.138
-
-param <- param.msm(nwstats = st, ai.scale = ai.scale,
-                    riskh.start = 2450, prep.start = 2601)
-init <- init.msm(nwstats = st, prev.B = prev, prev.W = prev)
-control <- control.msm(simno = fsimno, nsteps = 50 * 52,
-                        nsims = 16, ncores = 16, save.int = 5000,
-                        verbose.int = 100, save.network = FALSE,
-                        save.other = c("attr", "temp", "riskh", "el", "p"))
+param <- param_msm(nwstats = st, 
+                   ai.scale = ai.scale,
+                   riskh.start = 2450, 
+                   prep.start = 2601)
+init <- init_msm(nwstats = st, 
+                 prev.B = prev, 
+                 prev.W = prev)
+control <- control_msm(simno = fsimno, 
+                       nsteps = 50 * 52,
+                       nsims = 16, 
+                       ncores = 16, 
+                       save.int = 5000,
+                       verbose.int = 100, 
+                       save.network = FALSE,
+                       save.other = c("attr", "temp", "riskh", "el", "p"))
 
 ## Simulation
 netsim_hpc("est/fit.10k.rda", param, init, control, compress = "xz",

@@ -1,19 +1,19 @@
 
 ## Packages
 library("methods")
-suppressPackageStartupMessages(library("mardham2"))
-library(EasyABC)
+suppressMessages(library("EpiModelHIVmsm"))
+library("EasyABC")
 
 ## Parameters
 
 get_params <- function(x) {
   set.seed(x[1])
-  require("mardham2")
+  require("EpiModelHIVmsm")
   load("est/nwstats.10k.rda")
-  param <- param.mard(nwstats = st, ai.scale = x[2],
+  param <- param_msm(nwstats = st, ai.scale = x[2],
                       riskh.start = 5000, prep.start = 5000)
-  init <- init.mard(nwstats = st, prev.B = x[3], prev.W = x[3])
-  control <- control.mard(simno = 1, nsteps = 70 * 52,
+  init <- init_msm(nwstats = st, prev.B = x[3], prev.W = x[3])
+  control <- control_msm(simno = 1, nsteps = 70 * 52,
                           nsims = 1, ncores = 1, save.int = 5000,
                           verbose.int = 100, save.network = FALSE, save.other = NULL)
   load("est/fit.10k.rda")

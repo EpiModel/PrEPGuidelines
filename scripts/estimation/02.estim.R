@@ -1,16 +1,16 @@
 
 ## Paper 1 estimation file
 
-suppressPackageStartupMessages(library(mardham2))
+suppressMessages(library(EpiModelHIVmsm))
 rm(list = ls())
 
-load("scenarios/p1/est/nwstats.rda")
+load("est/nwstats.rda")
 
 
 # 1. Main Model -----------------------------------------------------------
 
 # Initialize network
-nw.main <- base_nw.mard(st)
+nw.main <- base_nw_msm(st)
 
 # Assign degree
 nw.main <- assign_degree(nw.main, deg.type = "pers", nwstats = st)
@@ -88,7 +88,7 @@ fit.i <- netest(nw.inst,
 
 # Save data
 est <- list(fit.m, fit.p, fit.i)
-save(est, file = "scenarios/p1/est/fit.rda")
+save(est, file = "est/fit.rda")
 
 
 # Diagnostics -------------------------------------------------------------
