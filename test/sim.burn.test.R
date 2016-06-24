@@ -1,6 +1,6 @@
 ## Packages
 library("methods")
-suppressMessages(library("EpiModelHIVmsm"))
+suppressMessages(library("EpiModelHIV"))
 
 
 # Burn-In Model -----------------------------------------------------------

@@ -1,7 +1,7 @@
 
 ## Packages
 library("methods")
-suppressPackageStartupMessages(library("EpiModelHIVmsm"))
+suppressPackageStartupMessages(library("EpiModelHIV"))
 
 
 load("est/nwstats.10k.rda")

@@ -1,7 +1,7 @@
 
 ## Packages
 library("methods")
-suppressMessages(library("EpiModelHIVmsm"))
+suppressMessages(library("EpiModelHIV"))
 library("EpiModelHPC")
 
 

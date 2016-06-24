@@ -1,7 +1,7 @@
 
 ## Paper 1 estimation file
 
-suppressMessages(library(EpiModelHIVmsm))
+suppressMessages(library(EpiModelHIV))
 rm(list = ls())
 
 load("est/nwstats.rda")

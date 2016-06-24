@@ -2,7 +2,7 @@
 ## Paper 1 scenario setup file
 
 rm(list = ls())
-suppressMessages(library(EpiModelHIVmsm))
+suppressMessages(library(EpiModelHIV))
 
 
 # Time unit for simulation, relative to 1 day

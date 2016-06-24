@@ -1,5 +1,5 @@
 
-library("EpiModelHIVmsm")
+library("EpiModelHIV")
 setwd("~/Dropbox/Dev/Camp/")
 
 # Figure 1 ----------------------------------------------------------------

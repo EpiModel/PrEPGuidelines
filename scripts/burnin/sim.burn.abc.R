@@ -1,14 +1,14 @@
 
 ## Packages
 library("methods")
-suppressMessages(library("EpiModelHIVmsm"))
+suppressMessages(library("EpiModelHIV"))
 library("EasyABC")
 
 ## Parameters
 
 get_params <- function(x) {
   set.seed(x[1])
-  require("EpiModelHIVmsm")
+  require("EpiModelHIV")
   load("est/nwstats.10k.rda")
   param <- param_msm(nwstats = st, ai.scale = x[2],
                       riskh.start = 5000, prep.start = 5000)

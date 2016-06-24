@@ -1,7 +1,7 @@
 
 ## Packages
 library("methods")
-suppressPackageStartupMessages(library("EpiModelHIVmsm"))
+suppressPackageStartupMessages(library("EpiModelHIV"))
 
 
 ## Environmental Arguments

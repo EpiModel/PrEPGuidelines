@@ -3,16 +3,15 @@ This repository holds the source to code to reproduce the analysis featured in o
 
 <img src="https://github.com/statnet/PrEPGuidelines/raw/master/analysis/Fig2.tiff">
 
-These models are written and executed in the R statistical software language. To run these files, it is necessary to first install our epidemic modeling software, [EpiModel](http://epimodel.org/), and our extension package specifically for modeling HIV transmission dynamics among MSM, [EpiModelHIVmsm](http://github.com/statnet/EpiModelHIVmsm).
+These models are written and executed in the R statistical software language. To run these files, it is necessary to first install our epidemic modeling software, [EpiModel](http://epimodel.org/), and our extension package specifically for modeling HIV transmission dynamics among MSM, [EpiModelHIV](http://github.com/statnet/EpiModelHIV).
 
 In R:
 ```
 install.packages("EpiModel")
 
 # install devtools if necessary, install.packages("devtools")
-devtools::install_github("statnet/EpiModelHPC")
 devtools::install_github("statnet/tergmLite")
-devtools::install_github("statnet/EpiModelHIVmsm")
+devtools::install_github("statnet/EpiModelHIV")
 ```
 
 ## Citation
