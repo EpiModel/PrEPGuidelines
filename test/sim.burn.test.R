@@ -17,3 +17,7 @@ control <- control_msm(simno = 1, nsteps = 10,
                         save.other = c("attr", "temp", "riskh", "el", "p"))
 
 sim <- netsim(est, param, init, control)
+
+
+plot(sim, y = "i.prev")
+abline(h = 0.26)

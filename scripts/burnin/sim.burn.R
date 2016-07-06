@@ -20,7 +20,8 @@ prev <- 0.253
 param <- param_msm(nwstats = st, 
                    ai.scale = ai.scale,
                    riskh.start = 2450, 
-                   prep.start = 2601)
+                   prep.start = 2601,
+                   condom.rr = 0.295)
 init <- init_msm(nwstats = st, 
                  prev.B = prev, 
                  prev.W = prev)
@@ -32,4 +33,6 @@ control <- control_msm(simno = fsimno,
 
 ## Simulation
 netsim_hpc("est/fit.10k.rda", param, init, control,
-            save.min = TRUE, save.max = TRUE)
+            save.min = TRUE, save.max = FALSE, cp.save.int = 1e5)
+
+# process_simfiles(min.n = 4, compress = TRUE)
