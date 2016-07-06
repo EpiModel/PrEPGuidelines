@@ -28,10 +28,7 @@ control <- control_msm(simno = fsimno,
                        nsteps = 50 * 52,
                        nsims = 16, 
                        ncores = 16, 
-                       save.int = 5000,
-                       verbose.int = 100, 
-                       save.network = FALSE,
-                       save.other = c("attr", "temp", "riskh", "el", "p"))
+                       verbose.int = 100)
 
 ## Simulation
 netsim_hpc("est/fit.10k.rda", param, init, control, compress = "xz",
