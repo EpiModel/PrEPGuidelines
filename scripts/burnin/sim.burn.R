@@ -31,5 +31,5 @@ control <- control_msm(simno = fsimno,
                        verbose.int = 100)
 
 ## Simulation
-netsim_hpc("est/fit.10k.rda", param, init, control, compress = "xz",
+netsim_hpc("est/fit.10k.rda", param, init, control,
             save.min = TRUE, save.max = TRUE)

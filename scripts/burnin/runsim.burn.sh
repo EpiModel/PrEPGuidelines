@@ -3,10 +3,10 @@
 ### User specs
 #PBS -N burnin
 #PBS -l nodes=1:ppn=16,mem=50gb,feature=16core,walltime=08:00:00
-#PBS -o /gscratch/csde/camp/out
-#PBS -e /gscratch/csde/camp/out
+#PBS -o /gscratch/csde/sjenness/prep2/out
+#PBS -e /gscratch/csde/sjenness/prep2/out
 #PBS -j oe
-#PBS -d /gscratch/csde/camp
+#PBS -d /gscratch/csde/sjenness/prep2
 #PBS -m n
 
 ### Standard specs
@@ -20,7 +20,7 @@ ulimit -v $MEMPERTASK
 export MX_RCACHE=0
 
 ### Modules
-module load r_3.2.0
+module load r_3.2.4
 
 ### App
 ALLARGS="${SIMNO} ${PBS_ARRAYID}"
