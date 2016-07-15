@@ -11,7 +11,7 @@ init <- init_msm(nwstats = st,
                  prev.B = 0.253, 
                  prev.W = 0.253)
 control <- control_msm(simno = 0.253, 
-                       nsteps = 52 * 5,
+                       nsteps = 10,
                        nsims = 1, 
                        ncores = 1, 
                        save.nwstats = TRUE,
@@ -52,4 +52,5 @@ df <- as.data.frame(sim)
 hist(df$ip.diff)
 hist(df$rp.diff)
 
+plot(sim, y = "i.prev")
 
