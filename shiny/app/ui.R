@@ -7,14 +7,16 @@ shinyUI(navbarPage(
            column(7, offset = 1,
                   h3("Impact of HIV Pre-Exposure Prophylaxis among MSM in the United States",
                      style = "color: #193556;"),
-                  h4("An Web-Based Modeling Tool for Public Health Practice", style = "color: #2E619E;"),
+                  h4("A Web-Based Modeling Tool for Public Health Practice", style = "color: #2E619E;"),
                   hr(),
                   p("This software tool provides additional opportunities to explore the
                     mathematical models of the paper:",
                     tags$blockquote("Jenness SM, Goodreau SM, Rosenberg E,
                                     Beylerian EN, Hoover KW, Smith DK, Sullivan P.",
-                                    em("Impact of CDC’s HIV Preexposure Prophylaxis
-                                       Guidelines among MSM in the United States."), "In Press, Journal of Infectious Diseases."),
+                                    "Impact of CDC’s HIV Preexposure Prophylaxis
+                                       Guidelines among MSM in the United States.", em("Journal of Infectious Diseases."), 
+                                    "2016. Advance access online ahead of print: DOI: 10.1093/infdis/jiw223", 
+                                    tags$a("[Paper Link]", target="_blank", href = "http://jid.oxfordjournals.org/content/early/2016/07/12/infdis.jiw223.full")),
                     "This tool provides tools to explore the simulation results from the main CDC guidelines
                      modeling scenario (J3) that served as the basis of the main analysis results and
                     sensitivity analyses."),
