@@ -12,7 +12,7 @@ runScenario <- function(prevalence = "26% (Paper Model)", coverage = 40, adheren
   ## Load data ##
 
   # Base
-  base_fn <- paste("shiny/app/data/sim", prevalence, "0.62.6.rda", sep = ".")
+  base_fn <- paste("data/sim", prevalence, "0.62.6.rda", sep = ".")
   load(base_fn)
   sim.base <- sim
 
@@ -23,7 +23,7 @@ runScenario <- function(prevalence = "26% (Paper Model)", coverage = 40, adheren
   incid.base <- sum(rowMeans(head(sim.base$incid, weeks)))
 
   # Active
-  scenario_fn <- paste("shiny/app/data/sim", prevalence, coverage, adherence, 6, "rda", sep = ".")
+  scenario_fn <- paste("data/sim", prevalence, coverage, adherence, 6, "rda", sep = ".")
   load(scenario_fn)
 
   dat <- list()
@@ -163,6 +163,8 @@ draw_means <- function(dat, var, pal = "black") {
 
 }
 
+# datA <- runScenario(coverage = 40)
+# datB <- runScenario(coverage = 40)
 
 tabScenario <- function(datA, datB, quantile = 0.95) {
 
@@ -234,4 +236,4 @@ tabScenario <- function(datA, datB, quantile = 0.95) {
   return(df)
 }
 
-
+# df <- tabScenario(datA, datB)
