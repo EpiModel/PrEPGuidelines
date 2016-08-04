@@ -7,37 +7,14 @@ source("fX.R")
 shinyUI(dashboardPage(
     dashboardHeader(title = "CDC PrEP Guidelines Model"),
     dashboardSidebar(
-        width = 300,
+        width = 200,
         sidebarMenu(
             menuItem("Introduction", tabName = "Introduction", icon = icon("dashboard")),
-            menuItem("Model Scenarios", tabName = "Model", icon = icon("line-chart")),
-            br(),
-            h4("Model Settings"),
-            selectInput(inputId = "prevalence", label = "Starting HIV Prevalence",
-                        choices = c("26% (Paper Model)",
-                                    "20%", "15%", "10%")),
-            sliderInput(inputId = "years", label = "Simulation Years",
-                        min = 1, max = 10, step = 1, value = 10),
-            br(),
-            h4("Model 1 Parameters"),
-            sliderInput(inputId = "a_coverage",
-                        label = "PrEP Coverage (%)",
-                        min = 10, max = 90, step = 10, value = 40),
-            sliderInput(inputId = "a_adherence",
-                        label = "Proportion Highly Adherent",
-                        min = 10, max = 90, step = 10, value = 60),
-            
-            br(),            
-            h4("Model 2 Parameters"),
-            sliderInput(inputId = "b_coverage",
-                        label = "PrEP Coverage (%)",
-                        min = 10, max = 90, step = 10, value = 40),
-            sliderInput(inputId = "b_adherence",
-                        label = "Proportion Highly Adherent",
-                        min = 10, max = 90, step = 10, value = 60)
-            
+            menuItem("Model Scenarios", tabName = "Model", icon = icon("line-chart"))
         )
-    ),
+        
+            
+        ),
     dashboardBody(
         tabItems(
             
@@ -101,17 +78,35 @@ shinyUI(dashboardPage(
                     img(src = "ajax-loader.gif")
                 ),
                 hr(),
+                fluidRow(
                 box(
                     title = "Model Plots", status = "primary", solidHeader = TRUE,
                     collapsible = TRUE,
-                    plotOutput("a_Plot", height = 600),
+                    plotOutput("a_Plot", height = 500),
                     selectInput(inputId = "dtype", label = "Summary Statistic",
                                 choices = c("Prevalence", "Incidence", "Number Infections Averted",
                                             "Percent Infections Averted", "Number Needed to Treat")),
                     sliderInput(inputId = "quantile", label = "Credible Interval",
                                 min = 0, max = 1, step = 0.01, value = 0.95)
                 ),
-                br(),
+                box(
+                title = "Model Parameters" , status = "success", solidHeader = TRUE,
+                h4("Model 1 Parameters"),
+                sliderInput(inputId = "a_coverage",
+                            label = "PrEP Coverage (%)",
+                            min = 10, max = 90, step = 10, value = 40),
+                sliderInput(inputId = "a_adherence",
+                            label = "Proportion Highly Adherent",
+                            min = 10, max = 90, step = 10, value = 60),
+                
+                h4("Model 2 Parameters"),
+                sliderInput(inputId = "b_coverage",
+                            label = "PrEP Coverage (%)",
+                            min = 10, max = 90, step = 10, value = 40),
+                sliderInput(inputId = "b_adherence",
+                            label = "Proportion Highly Adherent",
+                            min = 10, max = 90, step = 10, value = 60)
+            ),
                 box(
                     title = "Summary Statistics", status = "success", solidHeader = TRUE,
                     collapsible = TRUE,
@@ -120,7 +115,15 @@ shinyUI(dashboardPage(
                         tableOutput("table")
                     )
                 ),
-                box(
+            box(
+                title = "Model Settings" , status = "success", solidHeader = TRUE,
+                selectInput(inputId = "prevalence", label = "Starting HIV Prevalence",
+                            choices = c("26% (Paper Model)",
+                                        "20%", "15%", "10%")),
+                sliderInput(inputId = "years", label = "Simulation Years",
+                            min = 1, max = 10, step = 1, value = 10)
+            ),    
+            box(
                     title = "Definitions", status = "success", solidHeader = TRUE,
                     collapsible = TRUE,
                     p("The following epidemiological outcomes are featured in the tables and plots:"),
@@ -137,10 +140,11 @@ shinyUI(dashboardPage(
                                 new HIV infection in the population.")
                         )
                     
-                        )            
-                
+                        )
+            
                 
                 )
+            )
             )
                            )
                            )
