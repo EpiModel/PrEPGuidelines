@@ -163,6 +163,8 @@ draw_means <- function(dat, var, pal = "black") {
 
 }
 
+# datA <- runScenario(coverage = 40)
+# datB <- runScenario(coverage = 40)
 
 tabScenario <- function(datA, datB, quantile = 0.95) {
 
@@ -234,4 +236,4 @@ tabScenario <- function(datA, datB, quantile = 0.95) {
   return(df)
 }
 
-
+# df <- tabScenario(datA, datB)
