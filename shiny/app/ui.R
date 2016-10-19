@@ -82,12 +82,10 @@ shinyUI(dashboardPage(
                 column(width = 8,
                 box(width = NULL,
                     title = "Model Plots", status = "primary", solidHeader = TRUE,
-                    plotOutput("a_Plot", height = 400),
+                    plotOutput("a_Plot", height = 510),
                     selectInput(inputId = "dtype", label = "Summary Statistic",
                                 choices = c("Prevalence", "Incidence", "Number Infections Averted",
-                                            "Percent Infections Averted", "Number Needed to Treat")),
-                    sliderInput(inputId = "quantile", label = "Credible Interval",
-                                min = 0, max = 1, step = 0.01, value = 0.95)
+                                            "Percent Infections Averted", "Number Needed to Treat"))
                 ),
                 box(width = NULL,
                     title = "Summary Statistics", status = "primary", solidHeader = TRUE,
@@ -99,9 +97,8 @@ shinyUI(dashboardPage(
                     ),
                 
                 column(width = 4,
-                box(width = NULL, height = 284,
+                box(width = NULL,
                 title = "Model 1 Parameters" , status = "success", solidHeader = TRUE,
-                #h4("Model 1 Parameters"),
                 sliderInput(inputId = "a_coverage",
                             label = "PrEP Coverage (%)",
                             min = 10, max = 90, step = 10, value = 40),
@@ -109,9 +106,8 @@ shinyUI(dashboardPage(
                             label = "Proportion Highly Adherent",
                             min = 10, max = 90, step = 10, value = 60)
                 ),
-                box(width = NULL, height = 284,
+                box(width = NULL,
                 title = "Model 2 Parameters" , status = "success", solidHeader = TRUE,
-                #h4("Model 2 Parameters"),
                 sliderInput(inputId = "b_coverage",
                             label = "PrEP Coverage (%)",
                             min = 10, max = 90, step = 10, value = 40),
@@ -119,19 +115,21 @@ shinyUI(dashboardPage(
                             label = "Proportion Highly Adherent",
                             min = 10, max = 90, step = 10, value = 60)
                 ),
-                box(width = NULL, height = 284,
+                box(width = NULL,
                 title = "Model Settings" , status = "success", solidHeader = TRUE,
                 selectInput(inputId = "prevalence", label = "Starting HIV Prevalence",
                             choices = c("26% (Paper Model)",
                                         "20%", "15%", "10%")),
                 sliderInput(inputId = "years", label = "Simulation Years",
-                            min = 1, max = 10, step = 1, value = 10)
+                            min = 1, max = 10, step = 1, value = 10),
+                sliderInput(inputId = "quantile", label = "Credible Interval",
+                            min = 0, max = 1, step = 0.01, value = 0.95)
                 )
                     )
             ),
             
             fluidRow(
-                box(width = 12, height = 200,
+                box(width = 12, height = 210,
                     title = "Definitions", status = "info", solidHeader = TRUE,
                     p("The following epidemiological outcomes are featured in the tables and plots:"),
                     tags$ul(
