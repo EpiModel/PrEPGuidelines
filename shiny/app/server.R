@@ -2,7 +2,7 @@ library(shiny)
 library(shinydashboard)
 library(wesanderson)
 library(plotly)
-source("fX.R")
+source("fx.R")
 
 
 shinyServer(function(input, output, session) {

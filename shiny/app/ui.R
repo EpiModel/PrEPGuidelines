@@ -2,7 +2,7 @@ library(shiny)
 library(shinydashboard)
 library(wesanderson)
 library(plotly)
-source("fX.R")
+source("fx.R")
 
 shinyUI(dashboardPage(
     dashboardHeader(title = "CDC PrEP Guidelines Model"),
