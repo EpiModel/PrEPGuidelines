@@ -17,7 +17,7 @@ shinyUI(navbarPage(
                                        Guidelines among MSM in the United States.", em("Journal of Infectious Diseases."), 
                                     "2016. Advance access online ahead of print: DOI: 10.1093/infdis/jiw223", 
                                     tags$a("[Paper Link]", target="_blank", href = "http://jid.oxfordjournals.org/content/early/2016/07/12/infdis.jiw223.full")),
-                    "This tool provides tools to explore the simulation results from the main CDC guidelines
+                    "This webtool provides tools to explore the simulation results from the main CDC guidelines
                      modeling scenario (J3) that served as the basis of the main analysis results and
                     sensitivity analyses."),
                   p("To get started, enter a desired number of years in the simulation. One model alone
@@ -39,7 +39,7 @@ shinyUI(navbarPage(
                     that corresponds to the local value of interest and the number of years for
                     the PrEP intervention simulation. Note that the model in the paper corresponds
                     to a starting prevalence of 26% that corresponds to observed values in a cohort of
-                    Atlanta-area MSM. Bayesian callibration methods were used to arrive at the other
+                    Atlanta-area MSM. Bayesian calibration methods were used to arrive at the other
                     starting prevalences by adjusting the frequency of anal intercourse within
                     partnerships; since other factors may also contribute to variation in local HIV
                     prevalence, this model assumption should be considered when evaluating the
@@ -107,14 +107,14 @@ shinyUI(navbarPage(
            h4("Definitions"),
            p("The following epidemiological outcomes are featured in the tables and plots:"),
            tags$ul(
-             tags$li(strong("Prevalence:"), "the number of MSM infected infected at the final time step of the simulation."),
+             tags$li(strong("Prevalence:"), "the proportion of MSM infected at the final time step of the simulation."),
              tags$li(strong("Incidence:"), "the number of new infections per 100 person-years of
-                     time at risk the final time step in the simulation."),
+                     time at risk at the final time step in the simulation."),
              tags$li(strong("Number of Infections Averted (NIA):"), "compared to a base model in which
-                     there would be no PrEP available, the number of infectious averted due to PrEP over the cumulative
+                     there would be no PrEP available, the number of infections averted due to PrEP over the cumulative
                      simulation time. This is expressed in terms of 100,000 person-years at risk."),
              tags$li(strong("Percent of Infections Averted (PIA):"), "the NIA over the total number
-                     of infections occurred in the base model, in the absence of any PrEP."),
+                     of infections that occurred in the base model, in the absence of any PrEP."),
              tags$li(strong("Number Needed to Treat (NNT):"), "the number of person-years on PrEP needed to prevent one
                      new HIV infection in the population.")
              )
