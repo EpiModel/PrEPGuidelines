@@ -16,7 +16,12 @@ devtools::install_github("statnet/EpiModelHIV")
 
 ## Citation
 
-> Jenness SM, Goodreau SM, Rosenberg E, Beylerian EN, Hoover KW, Smith DK, Sullivan P. Impact of CDC’s HIV Preexposure Prophylaxis Guidelines among MSM in the United States. In Press, Journal of Infectious Diseases.
+> Jenness SM, Goodreau SM, Rosenberg E, Beylerian EN, Hoover KW, Smith DK, Sullivan P. Impact of CDC’s HIV Preexposure Prophylaxis Guidelines among MSM in the United States. _Journal of Infectious Diseases._ Epub ahead of print. 2016. DOI: 10.1093/infdis/jiw223.
+
+* [Paper](http://jid.oxfordjournals.org/content/early/2016/07/12/infdis.jiw223.full). 
+* [Technical Appendix](http://jid.oxfordjournals.org/content/early/2016/07/12/infdis.jiw223/suppl/DC1). 
+* [Editorial Commentary by Dr. Jared Baeten](http://jid.oxfordjournals.org/content/early/2016/07/12/infdis.jiw224.full)
+* [Web-Based Modeling Tool for Public Health Practice](https://prism.shinyapps.io/cdc-prep-guidelines)
 
 ## Abstract
 
@@ -33,7 +38,3 @@ At 40% coverage of indicated MSM over the next decade, application of CDC guidel
 
 ### Conclusions
 Implementation of CDC PrEP guidelines would result in strong and sustained reductions in HIV incidence among MSM in the United States. The guidelines strike a good balance between epidemiological impact (PIA) and efficiency (NNT) at plausible scale-up levels. Adherence counseling could maximize public health investment in PrEP by decreasing the NNT.
-
-## Shiny App
-Our publication also includes an web-based Shiny app to further explore the results: https://prism.shinyapps.io/cdc-prep-guidelines
-
