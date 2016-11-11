@@ -18,7 +18,7 @@ shinyUI(navbarPage(
                                     "2016. Advance access online ahead of print: DOI: 10.1093/infdis/jiw223", 
                                     tags$a("[Paper Link]", target="_blank", href = "http://jid.oxfordjournals.org/content/early/2016/07/12/infdis.jiw223.full")),
                     "This webtool provides tools to explore the simulation results from the main CDC guidelines
-                     modeling scenario (J3) that served as the basis of the main analysis results and
+                     modeling scenario (J2) that served as the basis of the main analysis results and
                     sensitivity analyses."),
                   p("To get started, enter a desired number of years in the simulation. One model alone
                     or a two-model comparison set may be shown
