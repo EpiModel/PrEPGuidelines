@@ -1,4 +1,4 @@
-## Impact of CDC’s HIV Preexposure Prophylaxis Guidelines among Men Who Have Sex with Men in the United States.
+## Impact of CDC’s HIV Preexposure Prophylaxis Guidelines among Men Who Have Sex with Men in the United States
 
 This repository holds the source to code to reproduce the analysis featured in our HIV transmission model among men who have sex with men, as described below. In that model, we investigated the epidemiological impact and efficiency of implementing HIV preexposure prophylaxis according to CDC's clinical practice guidelines.
 
