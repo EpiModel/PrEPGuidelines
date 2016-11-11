@@ -33,7 +33,7 @@ shinyUI(dashboardPage(
                                              Guidelines among MSM in the United States.", em("In Press, Journal of Infectious Diseases."),
                                              "2016. Advance access online ahead of print:  DOI: 10.1093/infdis/jiw223", 
                                              tags$a("[Paper Link]", target="_blank", href = "http://jid.oxfordjournals.org/content/early/2016/07/12/infdis.jiw223.full")),                 "This tool provides tools to explore the simulation results from the main CDC guidelines
-                             modeling scenario (J3) that served as the basis of the main analysis results and
+                             modeling scenario (J2) that served as the basis of the main analysis results and
                              sensitivity analyses."),
                            p("To get started, enter a desired number of years in the simulation. One model alone
                              or a two-model comparison set may be shown together based on different coverage and 
@@ -133,7 +133,7 @@ shinyUI(dashboardPage(
                     title = "Definitions", status = "info", solidHeader = TRUE,
                     p("The following epidemiological outcomes are featured in the tables and plots:"),
                     tags$ul(
-                        tags$li(strong("Prevalence:"), "the number of MSM infected infected at the final time step of the simulation."),
+                        tags$li(strong("Prevalence:"), "the number of MSM infected at the final time step of the simulation."),
                         tags$li(strong("Incidence:"), "the number of new infections per 100 person-years of
                                 time at risk the final time step in the simulation."),
                         tags$li(strong("Number of Infections Averted (NIA):"), "compared to a base model in which
