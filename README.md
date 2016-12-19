@@ -19,7 +19,9 @@ devtools::install_github("statnet/EpiModelHIV")
 
 ## Citation
 
-> Jenness SM, Goodreau SM, Rosenberg E, Beylerian EN, Hoover KW, Smith DK, Sullivan P. Impact of CDC’s HIV Preexposure Prophylaxis Guidelines among MSM in the United States. _Journal of Infectious Diseases._ Epub ahead of print. 2016. DOI: 10.1093/infdis/jiw223.
+> Jenness SM, Goodreau SM, Rosenberg E, Beylerian EN, Hoover KW, Smith DK, Sullivan P. Impact of CDC’s HIV Preexposure Prophylaxis Guidelines among MSM in the United States. _Journal of Infectious Diseases._ 2016; 214(12): 1800--1807.
+
+## Materials
 
 * [Main Paper](http://jid.oxfordjournals.org/content/early/2016/07/12/infdis.jiw223.full)
 * [Technical Appendix](http://jid.oxfordjournals.org/content/early/2016/07/12/infdis.jiw223/suppl/DC1)
