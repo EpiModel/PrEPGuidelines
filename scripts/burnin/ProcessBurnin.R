@@ -16,3 +16,6 @@ sim <- get_sims(sim, sims = "mean", var = "i.prev")
 tail(as.data.frame(sim)$i.prev)
 
 save(sim, file = "est/p1.burnin.rda")
+
+
+## 
