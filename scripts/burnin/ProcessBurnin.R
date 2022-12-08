@@ -18,4 +18,4 @@ tail(as.data.frame(sim)$i.prev)
 save(sim, file = "est/p1.burnin.rda")
 
 
-## 
+### 
